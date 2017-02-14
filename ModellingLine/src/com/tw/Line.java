@@ -6,11 +6,10 @@ public class Line {
     private Point p1;
     private Point p2;
 
-    public Line(Point p1, Point p2) throws Exception{
+    public Line(Point p1, Point p2) throws Exception {
         this.p1 = p1;
         this.p2 = p2;
-        if(p1.equals(p2))
-        {
+        if (p1.equals(p2)) {
             throw (new Exception());
         }
     }
@@ -18,5 +17,20 @@ public class Line {
     public double calculateLength() {
 
         return p1.distanceToPoint(p2);
+    }
+
+    public boolean lineEqualityCheck(Line line) {
+        if ((this.p1.equals(line.p1)) && (this.p2.equals(line.p2)))
+        {
+            return true;
+        }
+        else if ((this.p1.equals(line.p2)) && (this.p2.equals(line.p1)))
+        {
+            return true;
+        }
+        else
+            {
+            return false;
+        }
     }
 }

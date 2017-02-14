@@ -32,8 +32,7 @@ public class Point {
         return result;
     }
 
-    double distanceToPoint(Point p)
-    {
-        return Math.sqrt((Math.pow(this.coordinateX - p.coordinateX,2)+(Math.pow(this.coordinateY - p.coordinateY,2))));
+    double distanceToPoint(Point p) {
+        return Math.sqrt((Math.pow(this.coordinateX - p.coordinateX, 2) + (Math.pow(this.coordinateY - p.coordinateY, 2))));
     }
 }
