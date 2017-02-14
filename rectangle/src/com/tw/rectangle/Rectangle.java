@@ -1,7 +1,7 @@
 package com.tw.rectangle;
 
 
-// JOB OF THE CLASS : Geometric rectangle with 4 sides
+// JOB OF THE CLASS : Geometric rectangle with 4 sides with two opposite sides equal
 class Rectangle {
 
     private double width, length;
@@ -17,5 +17,9 @@ class Rectangle {
 
     double computePerimeter() {
         return 2 * (width + length);
+    }
+
+    static Rectangle createSquare(double side) {
+        return new Rectangle(side, side);
     }
 }
