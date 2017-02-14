@@ -18,4 +18,5 @@ public class PointTest {
         assertNotEquals(p1,p3);
     }
 
+
 }
