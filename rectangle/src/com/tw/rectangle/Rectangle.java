@@ -1,14 +1,14 @@
-package main;
+package com.tw.rectangle;
 
-public class Rectangle {
+class Rectangle {
 
     private double width, length;
-    public Rectangle(double width, double length) {
+    Rectangle(double width, double length) {
         this.width = width;
         this.length = length;
     }
 
-    public double computeArea() {
+    double computeArea() {
         return width * length;
     }
 }

@@ -1,6 +1,5 @@
-package test;
+package com.tw.rectangle;
 
-import main.Rectangle;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
