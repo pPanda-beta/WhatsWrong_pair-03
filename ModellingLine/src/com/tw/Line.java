@@ -11,10 +11,13 @@ public class Line {
     }
 
     public boolean validateLine() {
-        if(p1==p2){
+        if (p1 == p2) {
             return false;
-        }
-        else
+        } else
             return true;
+    }
+
+    public double calculateLength() {
+        return Math.sqrt((Math.pow(p1.coordinateX - p2.coordinateX,2)+(Math.pow(p1.coordinateY - p2.coordinateY,2))));
     }
 }
