@@ -2,8 +2,8 @@ package com.tw;
 
 //Job: A 2-D coordinate.
 public class Point {
-    double coordinateX;
-    double coordinateY;
+    private double coordinateX;
+    private double coordinateY;
 
     public Point(double X, double Y) {
         this.coordinateX = X;
@@ -30,5 +30,10 @@ public class Point {
         temp = Double.doubleToLongBits(coordinateY);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
+    }
+
+    double distanceToPoint(Point p)
+    {
+        return Math.sqrt((Math.pow(this.coordinateX - p.coordinateX,2)+(Math.pow(this.coordinateY - p.coordinateY,2))));
     }
 }

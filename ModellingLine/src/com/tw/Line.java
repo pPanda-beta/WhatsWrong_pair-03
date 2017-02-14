@@ -1,9 +1,10 @@
 package com.tw;
 
+//JOB: 2-D Geometric shape which is straight locus of two points.
 public class Line {
 
-    Point p1;
-    Point p2;
+    private Point p1;
+    private Point p2;
 
     public Line(Point p1, Point p2) {
         this.p1 = p1;
@@ -18,6 +19,6 @@ public class Line {
     }
 
     public double calculateLength() {
-        return Math.sqrt((Math.pow(p1.coordinateX - p2.coordinateX,2)+(Math.pow(p1.coordinateY - p2.coordinateY,2))));
+        return p1.distanceToPoint(p2);
     }
 }
