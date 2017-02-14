@@ -1,5 +1,6 @@
 package com.tw.rectangle;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -7,10 +8,32 @@ import static org.junit.Assert.*;
 
 public class RectangleTest {
 
+    private Rectangle rectangle4x5;
+    private Rectangle rectangle3x2;
+
+    @Before
+    public void setup(){
+        rectangle3x2 = new Rectangle(3, 2);
+        rectangle4x5 = new Rectangle(4, 5);
+    }
+
     @Test
     public void computeAreaShouldReturnAreaGivenLengthAndWidth () {
-        Rectangle rectangle = new Rectangle(10, 5);
-        double area = rectangle.computeArea();
-        assertEquals(50, area, 0);
+        double area = rectangle3x2.computeArea();
+        assertEquals(6, area, 0);
+
+        area = rectangle4x5.computeArea();
+        assertEquals(20, area, 0);
     }
+
+    @Test
+    public void computePerimeterShouldReturnAreaGivenLengthAndWidth () {
+        double perimeter = rectangle3x2.computePerimeter();
+        assertEquals(10, perimeter, 0);
+
+        perimeter = rectangle4x5.computePerimeter();
+        assertEquals(18, perimeter, 0);
+
+    }
+
 }
