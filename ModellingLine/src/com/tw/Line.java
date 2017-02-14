@@ -6,19 +6,17 @@ public class Line {
     private Point p1;
     private Point p2;
 
-    public Line(Point p1, Point p2) {
+    public Line(Point p1, Point p2) throws Exception{
         this.p1 = p1;
         this.p2 = p2;
-    }
-
-    public boolean validateLine() {
-        if (p1 == p2) {
-            return false;
-        } else
-            return true;
+        if(p1.equals(p2))
+        {
+            throw (new Exception());
+        }
     }
 
     public double calculateLength() {
+
         return p1.distanceToPoint(p2);
     }
 }
